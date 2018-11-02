@@ -1,0 +1,6 @@
+framework module Pods_EvaluadorSec {
+  umbrella header "Pods-EvaluadorSec-umbrella.h"
+
+  export *
+  module * { export * }
+}
