@@ -12,24 +12,23 @@ import FirebaseAuth
 import FirebaseDatabase
 import SVProgressHUD
 
-struct materias {
-    let nombreMateria:String!
-    let fechaEvaluacion:String!
-}
-
 class EvaluacionesTableVC: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-    var arrayEvaluaciones:[modeloEvaluacion] = []
-    var arrayMais:[modeloMaestro] = []
+    //var arrayEvaluaciones:[modeloEvaluacion] = []
+    //var arrayMais:[modeloMaestro] = []
     var idDocente = Int()
     var docenteSeleccionad = String()
     
-    var arrayMaterias = [materias]()
-    var materiasMaestro = [modeloEvaluacion]()
+    //var arrayMaterias = [materias]()
+    //var materiasMaestro = [modeloEvaluacion]()
     var arraySubjects:[String] = []
     var arrayDates:[String] = []
+    var arrayIDUser:[String] = []
+    var arrayEvaluacionesDiana:[String] = []
+    var arrayEvaluacionesMarcos:[String] = []
+    var arrayEvaluacionesOtro:[String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +48,28 @@ class EvaluacionesTableVC: UIViewController {
                 let miMateria = modeloEvaluacion()
                 miMateria.materia = dictionary["Materia"] as? String
                 miMateria.fecha = dictionary["Fecha"] as? String
+                miMateria.implementador = dictionary["Implementador"] as? String
+                
                 print("--------------------------------")
-                print(miMateria.materia!, miMateria.fecha!)
+                print(miMateria.materia!, miMateria.fecha!, miMateria.implementador!)
+                
+                switch miMateria.implementador{
+                    //Caso Marcos
+                case "Marcos López Aquino":
+                    self.arrayEvaluacionesMarcos.append(miMateria.materia)
+                    print("--------Se ha añadido una materia a Marcos--------")
+                    
+                    //Caso Diana
+                case "Diana Vázquez Fosado":
+                    self.arrayEvaluacionesDiana.append(miMateria.materia)
+                    print("--------Se ha añadido una materia a Diana--------")
+                    
+                    //Caso otro
+                default:
+                    self.arrayEvaluacionesOtro.append(miMateria.materia)
+                    print("--------Se ha añadido una materia a Otro--------")
+                }
+                
                 self.arraySubjects.append(miMateria.materia)
                 self.arrayDates.append(miMateria.fecha)
                 
@@ -81,13 +100,25 @@ extension EvaluacionesTableVC: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arraySubjects.count
+        if arraySubjects.count > 0{
+            return arraySubjects.count
+        }else{
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEvaluaciones", for: indexPath) as! celdaTablaEvaluaciones
-        cell.labelMateria.text = arraySubjects[indexPath.row]
-        //cell.textLabel?.text = materiasMaestro[indexPath.row].nombreMateria
-        return cell
+        if arraySubjects.count > 0{
+            cell.labelMateria.text = arraySubjects[indexPath.row]
+            //cell.labelMateria.textAlignment = .justified
+            cell.labelFecha.text = arrayDates[indexPath.row]
+            return cell
+        }else{
+            cell.labelMateria.text = "No hay evaluaciones registradas."
+            //cell.labelMateria.textAlignment = .center
+            cell.labelFecha.text = ""
+            return cell
+        }
     }
 }
