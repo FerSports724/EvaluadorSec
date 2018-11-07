@@ -23,6 +23,7 @@
 		EDAEB4B3217E4888009599D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDAEB4B2217E4888009599D6 /* GoogleService-Info.plist */; };
 		EDB6512D2180ED0F004CCA65 /* modeloEvaluacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB6512C2180ED0F004CCA65 /* modeloEvaluacion.swift */; };
 		EDE12AC5217E4FD100ACC161 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE12AC4217E4FD100ACC161 /* MainMenuView.swift */; };
+		EDEE39D62193313700409841 /* evaluacionDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEE39D52193313700409841 /* evaluacionDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		EDAEB4B2217E4888009599D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDB6512C2180ED0F004CCA65 /* modeloEvaluacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modeloEvaluacion.swift; sourceTree = "<group>"; };
 		EDE12AC4217E4FD100ACC161 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		EDEE39D52193313700409841 /* evaluacionDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = evaluacionDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				ED8E8A11217F8535000D8AEE /* celdaDocente.swift */,
 				ED377BD92180BC67005C993B /* EvaluacionesTableVC.swift */,
 				ED7979412188EBB50084BD55 /* celdaTablaEvaluaciones.swift */,
+				EDEE39D52193313700409841 /* evaluacionDetailsVC.swift */,
 				ED49E8832187515300C228D3 /* nuevaEvaluacionVC.swift */,
 				ED49E88521877C1C00C228D3 /* celdaDatos.swift */,
 				EDAEB4A4217E46EF009599D6 /* Main.storyboard */,
@@ -243,6 +246,7 @@
 				ED49E88621877C1C00C228D3 /* celdaDatos.swift in Sources */,
 				ED7979422188EBB50084BD55 /* celdaTablaEvaluaciones.swift in Sources */,
 				ED377BDA2180BC67005C993B /* EvaluacionesTableVC.swift in Sources */,
+				EDEE39D62193313700409841 /* evaluacionDetailsVC.swift in Sources */,
 				ED49E8842187515300C228D3 /* nuevaEvaluacionVC.swift in Sources */,
 				ED8E8A12217F8535000D8AEE /* celdaDocente.swift in Sources */,
 				EDE12AC5217E4FD100ACC161 /* MainMenuView.swift in Sources */,

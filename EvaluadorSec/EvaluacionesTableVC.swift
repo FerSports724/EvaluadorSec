@@ -12,23 +12,26 @@ import FirebaseAuth
 import FirebaseDatabase
 import SVProgressHUD
 
+struct pasar {
+    var nombre:String!
+    var materia:String!
+}
+
 class EvaluacionesTableVC: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-    
-    //var arrayEvaluaciones:[modeloEvaluacion] = []
-    //var arrayMais:[modeloMaestro] = []
+
     var idDocente = Int()
     var docenteSeleccionad = String()
-    
-    //var arrayMaterias = [materias]()
-    //var materiasMaestro = [modeloEvaluacion]()
+
     var arraySubjects:[String] = []
     var arrayDates:[String] = []
-    var arrayIDUser:[String] = []
+    var arrayDianisManis:[String] = []
     var arrayEvaluacionesDiana:[String] = []
     var arrayEvaluacionesMarcos:[String] = []
     var arrayEvaluacionesOtro:[String] = []
+    
+    let evaluadoresHeader:[String] = ["Marcos López Aquino", "Diana Vázquez Fosado", "Otro"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,29 +99,124 @@ extension EvaluacionesTableVC: UITableViewDataSource{
 extension EvaluacionesTableVC: UITableViewDelegate{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return evaluadoresHeader.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if arraySubjects.count > 0{
-            return arraySubjects.count
-        }else{
-            return 1
+        switch section{
+            case 0:
+                if arrayEvaluacionesMarcos.count > 0{
+                    return arrayEvaluacionesMarcos.count
+                }else{
+                    return 1
+            }
+            
+            case 1:
+                if arrayEvaluacionesDiana.count > 0{
+                    return arrayEvaluacionesDiana.count
+                }else{
+                    return 1
+            }
+            default:
+                if arrayEvaluacionesOtro.count > 0{
+                    return arrayEvaluacionesOtro.count
+                }else{
+                    return 1
+            }
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEvaluaciones", for: indexPath) as! celdaTablaEvaluaciones
-        if arraySubjects.count > 0{
-            cell.labelMateria.text = arraySubjects[indexPath.row]
-            //cell.labelMateria.textAlignment = .justified
-            cell.labelFecha.text = arrayDates[indexPath.row]
-            return cell
-        }else{
-            cell.labelMateria.text = "No hay evaluaciones registradas."
-            //cell.labelMateria.textAlignment = .center
-            cell.labelFecha.text = ""
-            return cell
+        
+        switch indexPath.section{
+        case 0:
+            if arrayEvaluacionesMarcos.count > 0{
+                cell.labelMateria.text = arrayEvaluacionesMarcos[indexPath.row]
+                cell.labelFecha.text = arrayDates[indexPath.row]
+                cell.isUserInteractionEnabled = true
+                return cell
+            }else{
+                cell.labelMateria.text = "No hay evaluaciones registradas."
+                cell.labelFecha.text = ""
+                cell.isUserInteractionEnabled = false
+                return cell
+            }
+            
+        case 1:
+            if arrayEvaluacionesDiana.count > 0{
+                cell.labelMateria.text = arrayEvaluacionesDiana[indexPath.row]
+                cell.labelFecha.text = arrayDates[indexPath.row]
+                cell.isUserInteractionEnabled = true
+                return cell
+            }else{
+                cell.labelMateria.text = "No hay evaluaciones registradas."
+                cell.labelFecha.text = ""
+                cell.isUserInteractionEnabled = false
+                return cell
+            }
+            
+        default:
+            if arrayEvaluacionesOtro.count > 0{
+                cell.labelMateria.text = arrayEvaluacionesOtro[indexPath.row]
+                cell.labelFecha.text = arrayDates[indexPath.row]
+                cell.isUserInteractionEnabled = true
+                return cell
+            }else{
+                cell.labelMateria.text = "No hay evaluaciones registradas."
+                cell.labelFecha.text = ""
+                cell.isUserInteractionEnabled = false
+                return cell
+            }
+            
         }
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return evaluadoresHeader[section]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueDetallesEv"{
+            
+            var miMateria:String! = ""
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow{
+                switch self.tableView.indexPathForSelectedRow?.section{
+                case 0:
+                    miMateria = arrayEvaluacionesMarcos[indexPath.row]
+                case 1:
+                    miMateria = arrayEvaluacionesDiana[indexPath.row]
+                default:
+                    miMateria = arrayEvaluacionesOtro[indexPath.row]
+                }
+                
+                
+                let destinationVC = segue.destination as! evaluacionDetailsVC
+                destinationVC.docenteEvaluado = docenteSeleccionad
+                destinationVC.materiaSeleccionada = miMateria
+            }
+            
+        }
+    }
+    
+    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var materia:String! = ""
+        
+        switch indexPath.section{
+        case 0:
+            materia = arrayEvaluacionesMarcos[indexPath.row]
+        case 1:
+            materia = arrayEvaluacionesDiana[indexPath.row]
+        default:
+            materia = arrayEvaluacionesOtro[indexPath.row]
+        }
+        
+        let destinationVC = evaluacionDetailsVC()
+        destinationVC.docenteEvaluado = docenteSeleccionad
+        destinationVC.materiaSeleccionada = materia
+        
+        destinationVC.performSegue(withIdentifier: "segueDetallesEv", sender: self)
+    }*/
 }
