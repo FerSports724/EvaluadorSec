@@ -12,175 +12,175 @@
 		<key>Imagen</key>
 		<string>imgSarah</string>
 	</dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Ana Bertha Hernández Carpinteyro</string>
-        <key>Identificador</key>
-        <string>Ana</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgAna</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Alejandra Reyes Cervantes</string>
-        <key>Identificador</key>
-        <string>Ale</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgAle</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Itzel Miranda Mejía</string>
-        <key>Identificador</key>
-        <string>Itzel</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgItzel</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Lourdes Hernández</string>
-        <key>Identificador</key>
-        <string>Lourdes</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgLourdes</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Jaime Alejandro Domínguez Ruíz</string>
-        <key>Identificador</key>
-        <string>Jaime</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgJaime</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Rosa María Bermúdez</string>
-        <key>Identificador</key>
-        <string>Rosy</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgRosy</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Celia Carolina Reyes Cajas</string>
-        <key>Identificador</key>
-        <string>Caro</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgCaro</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Alva Escobar Gutiérrez</string>
-        <key>Identificador</key>
-        <string>Alva</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgAlva</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Jesús Raymundo García Nájera</string>
-        <key>Identificador</key>
-        <string>Ray</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgRay</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Susana Castilla Vega</string>
-        <key>Identificador</key>
-        <string>Susy</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgSusy</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Nathau Guzmán</string>
-        <key>Identificador</key>
-        <string>Nathy</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgNathy</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Sandra Alonso</string>
-        <key>Identificador</key>
-        <string>Sandra</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgSandra</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Adriana Encarnación Hernández</string>
-        <key>Identificador</key>
-        <string>Adriana</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgAdriana</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Georgina Jiménez Landini</string>
-        <key>Identificador</key>
-        <string>Gina</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgGina</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Profe Nuevo</string>
-        <key>Identificador</key>
-        <string>Profe</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgProfe</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Pedro Sola</string>
-        <key>Identificador</key>
-        <string>Pedrito</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgPedrito</string>
-    </dict>
-    <dict>
-        <key>Nombre</key>
-        <string>Mr. Bean</string>
-        <key>Identificador</key>
-        <string>Bean</string>
-        <key>Idioma</key>
-        <string>Esp</string>
-        <key>Imagen</key>
-        <string>imgBean</string>
-    </dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Ana Bertha Hernández Carpinteyro</string>
+		<key>Identificador</key>
+		<string>Ana</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgAna</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Alejandra Reyes Cervantes</string>
+		<key>Identificador</key>
+		<string>Ale</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgAle</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Itzel Miranda Mejía</string>
+		<key>Identificador</key>
+		<string>Itzel</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgItzel</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Lourdes Hernández</string>
+		<key>Identificador</key>
+		<string>Lourdes</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgLourdes</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Jaime Alejandro Domínguez Ruíz</string>
+		<key>Identificador</key>
+		<string>Jaime</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgJaime</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Rosa María Bermúdez</string>
+		<key>Identificador</key>
+		<string>Rosy</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgRosy</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Celia Carolina Reyes Cajas</string>
+		<key>Identificador</key>
+		<string>Caro</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgCaro</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Alva Escobar Gutiérrez</string>
+		<key>Identificador</key>
+		<string>Alva</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgAlva</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Jesús Raymundo García Nájera</string>
+		<key>Identificador</key>
+		<string>Ray</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgRay</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Susana Castilla Vega</string>
+		<key>Identificador</key>
+		<string>Susy</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgSusy</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Nathau Guzmán</string>
+		<key>Identificador</key>
+		<string>Nathy</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgNathy</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Sandra Alonso</string>
+		<key>Identificador</key>
+		<string>Sandra</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgSandra</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Adriana Encarnación Hernández</string>
+		<key>Identificador</key>
+		<string>Adriana</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgAdriana</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Georgina Jiménez Landini</string>
+		<key>Identificador</key>
+		<string>Gina</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgGina</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Profe Nuevo</string>
+		<key>Identificador</key>
+		<string>Profe</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgProfe</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Pedro Sola</string>
+		<key>Identificador</key>
+		<string>Pedrito</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgPedrito</string>
+	</dict>
+	<dict>
+		<key>Nombre</key>
+		<string>Mr Bean</string>
+		<key>Identificador</key>
+		<string>Bean</string>
+		<key>Idioma</key>
+		<string>Esp</string>
+		<key>Imagen</key>
+		<string>imgBean</string>
+	</dict>
 </array>
 </plist>

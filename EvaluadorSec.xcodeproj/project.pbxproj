@@ -11,6 +11,7 @@
 		ED377BDA2180BC67005C993B /* EvaluacionesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED377BD92180BC67005C993B /* EvaluacionesTableVC.swift */; };
 		ED49E8842187515300C228D3 /* nuevaEvaluacionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49E8832187515300C228D3 /* nuevaEvaluacionVC.swift */; };
 		ED49E88621877C1C00C228D3 /* celdaDatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49E88521877C1C00C228D3 /* celdaDatos.swift */; };
+		ED778E662194B8C60094674F /* celdaDetallesEvaluacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED778E652194B8C50094674F /* celdaDetallesEvaluacion.swift */; };
 		ED7979422188EBB50084BD55 /* celdaTablaEvaluaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7979412188EBB50084BD55 /* celdaTablaEvaluaciones.swift */; };
 		ED8E8A10217F6EE7000D8AEE /* Docentes.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED8E8A0F217F6EE7000D8AEE /* Docentes.plist */; };
 		ED8E8A12217F8535000D8AEE /* celdaDocente.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E8A11217F8535000D8AEE /* celdaDocente.swift */; };
@@ -33,6 +34,7 @@
 		ED377BD92180BC67005C993B /* EvaluacionesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluacionesTableVC.swift; sourceTree = "<group>"; };
 		ED49E8832187515300C228D3 /* nuevaEvaluacionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nuevaEvaluacionVC.swift; sourceTree = "<group>"; };
 		ED49E88521877C1C00C228D3 /* celdaDatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaDatos.swift; sourceTree = "<group>"; };
+		ED778E652194B8C50094674F /* celdaDetallesEvaluacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaDetallesEvaluacion.swift; sourceTree = "<group>"; };
 		ED7979412188EBB50084BD55 /* celdaTablaEvaluaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaTablaEvaluaciones.swift; sourceTree = "<group>"; };
 		ED8E8A0F217F6EE7000D8AEE /* Docentes.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Docentes.plist; sourceTree = "<group>"; };
 		ED8E8A11217F8535000D8AEE /* celdaDocente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaDocente.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				ED377BD92180BC67005C993B /* EvaluacionesTableVC.swift */,
 				ED7979412188EBB50084BD55 /* celdaTablaEvaluaciones.swift */,
 				EDEE39D52193313700409841 /* evaluacionDetailsVC.swift */,
+				ED778E652194B8C50094674F /* celdaDetallesEvaluacion.swift */,
 				ED49E8832187515300C228D3 /* nuevaEvaluacionVC.swift */,
 				ED49E88521877C1C00C228D3 /* celdaDatos.swift */,
 				EDAEB4A4217E46EF009599D6 /* Main.storyboard */,
@@ -245,6 +248,7 @@
 			files = (
 				ED49E88621877C1C00C228D3 /* celdaDatos.swift in Sources */,
 				ED7979422188EBB50084BD55 /* celdaTablaEvaluaciones.swift in Sources */,
+				ED778E662194B8C60094674F /* celdaDetallesEvaluacion.swift in Sources */,
 				ED377BDA2180BC67005C993B /* EvaluacionesTableVC.swift in Sources */,
 				EDEE39D62193313700409841 /* evaluacionDetailsVC.swift in Sources */,
 				ED49E8842187515300C228D3 /* nuevaEvaluacionVC.swift in Sources */,

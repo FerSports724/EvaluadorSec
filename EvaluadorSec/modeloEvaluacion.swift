@@ -11,7 +11,7 @@ import Foundation
 class modeloEvaluacion{
     
     var ID_Evaluador:String!
-    var ID_Docente:Int!
+    var clave:String!
     var docente:String!
     var fecha:String!
     var grupo:String!
