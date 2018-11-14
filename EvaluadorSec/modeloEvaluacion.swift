@@ -18,6 +18,7 @@ class modeloEvaluacion{
     var idioma:String!
     var implementador:String!
     var materia:String!
+    var observaciones:String!
     var rubro01:Int!
     var rubro02:Int!
     var rubro03:Int!

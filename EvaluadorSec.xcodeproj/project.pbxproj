@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CCD8B4242B0BE05580CB2C8A /* Pods_EvaluadorSec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15CE399B54D8D83BE0D498F /* Pods_EvaluadorSec.framework */; };
+		ED0A3F64219B113D0093251D /* resumenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0A3F63219B113D0093251D /* resumenVC.swift */; };
+		ED0A3F66219B1B4D0093251D /* celdaObservaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0A3F65219B1B4D0093251D /* celdaObservaciones.swift */; };
 		ED377BDA2180BC67005C993B /* EvaluacionesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED377BD92180BC67005C993B /* EvaluacionesTableVC.swift */; };
 		ED49E8842187515300C228D3 /* nuevaEvaluacionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49E8832187515300C228D3 /* nuevaEvaluacionVC.swift */; };
 		ED49E88621877C1C00C228D3 /* celdaDatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49E88521877C1C00C228D3 /* celdaDatos.swift */; };
 		ED778E662194B8C60094674F /* celdaDetallesEvaluacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED778E652194B8C50094674F /* celdaDetallesEvaluacion.swift */; };
+		ED778E682194BA5E0094674F /* Rubros.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED778E672194BA5E0094674F /* Rubros.plist */; };
 		ED7979422188EBB50084BD55 /* celdaTablaEvaluaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7979412188EBB50084BD55 /* celdaTablaEvaluaciones.swift */; };
 		ED8E8A10217F6EE7000D8AEE /* Docentes.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED8E8A0F217F6EE7000D8AEE /* Docentes.plist */; };
 		ED8E8A12217F8535000D8AEE /* celdaDocente.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E8A11217F8535000D8AEE /* celdaDocente.swift */; };
@@ -31,10 +34,13 @@
 		0DB4F4208C083D2063824FEF /* Pods-EvaluadorSec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaluadorSec.release.xcconfig"; path = "Pods/Target Support Files/Pods-EvaluadorSec/Pods-EvaluadorSec.release.xcconfig"; sourceTree = "<group>"; };
 		7D57502F31959999C8A204E3 /* Pods-EvaluadorSec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaluadorSec.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EvaluadorSec/Pods-EvaluadorSec.debug.xcconfig"; sourceTree = "<group>"; };
 		A15CE399B54D8D83BE0D498F /* Pods_EvaluadorSec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EvaluadorSec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0A3F63219B113D0093251D /* resumenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resumenVC.swift; sourceTree = "<group>"; };
+		ED0A3F65219B1B4D0093251D /* celdaObservaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaObservaciones.swift; sourceTree = "<group>"; };
 		ED377BD92180BC67005C993B /* EvaluacionesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluacionesTableVC.swift; sourceTree = "<group>"; };
 		ED49E8832187515300C228D3 /* nuevaEvaluacionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nuevaEvaluacionVC.swift; sourceTree = "<group>"; };
 		ED49E88521877C1C00C228D3 /* celdaDatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaDatos.swift; sourceTree = "<group>"; };
 		ED778E652194B8C50094674F /* celdaDetallesEvaluacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaDetallesEvaluacion.swift; sourceTree = "<group>"; };
+		ED778E672194BA5E0094674F /* Rubros.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Rubros.plist; sourceTree = "<group>"; };
 		ED7979412188EBB50084BD55 /* celdaTablaEvaluaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaTablaEvaluaciones.swift; sourceTree = "<group>"; };
 		ED8E8A0F217F6EE7000D8AEE /* Docentes.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Docentes.plist; sourceTree = "<group>"; };
 		ED8E8A11217F8535000D8AEE /* celdaDocente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaDocente.swift; sourceTree = "<group>"; };
@@ -112,6 +118,8 @@
 				ED7979412188EBB50084BD55 /* celdaTablaEvaluaciones.swift */,
 				EDEE39D52193313700409841 /* evaluacionDetailsVC.swift */,
 				ED778E652194B8C50094674F /* celdaDetallesEvaluacion.swift */,
+				ED0A3F63219B113D0093251D /* resumenVC.swift */,
+				ED0A3F65219B1B4D0093251D /* celdaObservaciones.swift */,
 				ED49E8832187515300C228D3 /* nuevaEvaluacionVC.swift */,
 				ED49E88521877C1C00C228D3 /* celdaDatos.swift */,
 				EDAEB4A4217E46EF009599D6 /* Main.storyboard */,
@@ -120,6 +128,7 @@
 				EDAEB4AC217E46F2009599D6 /* Info.plist */,
 				EDAEB4B2217E4888009599D6 /* GoogleService-Info.plist */,
 				ED8E8A0F217F6EE7000D8AEE /* Docentes.plist */,
+				ED778E672194BA5E0094674F /* Rubros.plist */,
 			);
 			path = EvaluadorSec;
 			sourceTree = "<group>";
@@ -187,6 +196,7 @@
 				EDAEB4AB217E46F2009599D6 /* LaunchScreen.storyboard in Resources */,
 				ED8E8A10217F6EE7000D8AEE /* Docentes.plist in Resources */,
 				EDAEB4B3217E4888009599D6 /* GoogleService-Info.plist in Resources */,
+				ED778E682194BA5E0094674F /* Rubros.plist in Resources */,
 				EDAEB4A8217E46F2009599D6 /* Assets.xcassets in Resources */,
 				EDAEB4A6217E46EF009599D6 /* Main.storyboard in Resources */,
 			);
@@ -251,12 +261,14 @@
 				ED778E662194B8C60094674F /* celdaDetallesEvaluacion.swift in Sources */,
 				ED377BDA2180BC67005C993B /* EvaluacionesTableVC.swift in Sources */,
 				EDEE39D62193313700409841 /* evaluacionDetailsVC.swift in Sources */,
+				ED0A3F66219B1B4D0093251D /* celdaObservaciones.swift in Sources */,
 				ED49E8842187515300C228D3 /* nuevaEvaluacionVC.swift in Sources */,
 				ED8E8A12217F8535000D8AEE /* celdaDocente.swift in Sources */,
 				EDE12AC5217E4FD100ACC161 /* MainMenuView.swift in Sources */,
 				EDB6512D2180ED0F004CCA65 /* modeloEvaluacion.swift in Sources */,
 				EDAEB4A3217E46EF009599D6 /* ViewController.swift in Sources */,
 				EDAEB4A1217E46EF009599D6 /* AppDelegate.swift in Sources */,
+				ED0A3F64219B113D0093251D /* resumenVC.swift in Sources */,
 				ED8E8A14217F85C3000D8AEE /* modeloMaestro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
