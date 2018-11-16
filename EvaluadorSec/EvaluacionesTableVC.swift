@@ -212,5 +212,10 @@ extension EvaluacionesTableVC: UITableViewDelegate{
             }
             
         }
+        
+        if segue.identifier == "segueNuevo"{
+            let pantallNuevaEvaluacion = segue.destination as! nuevaEvaluacionVC
+            pantallNuevaEvaluacion.docenteEvaluar = docenteSeleccionad
+        }
     }
 }
