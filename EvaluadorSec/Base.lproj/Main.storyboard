@@ -321,6 +321,18 @@
                                                 <action selector="dismissBtn:" destination="qjb-tB-veF" id="Afm-eX-9i9"/>
                                             </connections>
                                         </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Save" id="2pF-K8-CKt">
+                                                <connections>
+                                                    <action selector="saveBtn:" destination="qjb-tB-veF" id="VgV-pC-Ejo"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Obs" id="XuJ-VV-0WF">
+                                                <connections>
+                                                    <action selector="observacionesBtn:" destination="qjb-tB-veF" id="Aec-5h-kTb"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -338,17 +350,26 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iOF-qA-yhs">
                                                     <rect key="frame" x="296" y="75" width="242" height="64"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edy-Jl-QQD">
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edy-Jl-QQD">
                                                             <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
-                                                            <state key="normal" image="iconYes"/>
+                                                            <state key="normal" image="iconYesWhite"/>
+                                                            <connections>
+                                                                <action selector="btnPressed:" destination="ZgI-au-fJK" eventType="touchUpInside" id="qg6-3e-7pJ"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p53-WE-Ipv">
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p53-WE-Ipv">
                                                             <rect key="frame" x="89" y="0.0" width="64" height="64"/>
-                                                            <state key="normal" image="iconNo"/>
+                                                            <state key="normal" image="iconNoWhite"/>
+                                                            <connections>
+                                                                <action selector="btnPressed:" destination="ZgI-au-fJK" eventType="touchUpInside" id="MF9-T0-BkJ"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yX-9a-DSI">
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yX-9a-DSI">
                                                             <rect key="frame" x="178" y="0.0" width="64" height="64"/>
-                                                            <state key="normal" image="iconNA"/>
+                                                            <state key="normal" image="iconNAWhite"/>
+                                                            <connections>
+                                                                <action selector="btnPressed:" destination="ZgI-au-fJK" eventType="touchUpInside" id="rhE-cn-8qg"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -398,6 +419,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RsD-5s-SUf"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="VTf-Ct-Z8S" id="6eH-9c-MSu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fd5-ck-4ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -681,9 +705,10 @@
     </scenes>
     <resources>
         <image name="iPad" width="960" height="637"/>
-        <image name="iconNA" width="64" height="64"/>
-        <image name="iconNo" width="64" height="64"/>
+        <image name="iconNAWhite" width="64" height="64"/>
+        <image name="iconNoWhite" width="64" height="64"/>
         <image name="iconUser" width="32" height="32"/>
         <image name="iconYes" width="64" height="64"/>
+        <image name="iconYesWhite" width="64" height="64"/>
     </resources>
 </document>

@@ -8,22 +8,50 @@
 
 import UIKit
 
+protocol celdaPresionadaBoton {
+    func onClick(seccion: Int, index: Int, tag:Int)
+}
+
 class celdaRubros: UITableViewCell {
     
     @IBOutlet var labelRubro: UILabel!
     @IBOutlet var btnYes: UIButton!
     @IBOutlet var btnNo: UIButton!
     @IBOutlet var btnNA: UIButton!
+    
+    var cellDelegate:celdaPresionadaBoton?
+    var index:IndexPath?
+    var seccion:Int?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
+    @IBAction func btnPressed(_ sender: UIButton) {
+        cellDelegate?.onClick(seccion: seccion!, index: (index?.row)!, tag: sender.tag)
+        
+        
+        switch sender.tag {
+            case 3:
+                btnYes.imageView?.image = UIImage(named: "iconYesY")
+                btnYes.imageView?.backgroundColor = UIColor.red
+                /*btnNo.imageView?.image = UIImage(named: "iconNoWhite")
+                btnNA.imageView?.image = UIImage(named: "iconNAWhite")*/
+            case 2:
+                //btnYes.imageView?.image = UIImage(named: "iconYesWhite")
+                btnNo.imageView?.image = UIImage(named: "iconNoY")
+                //btnNA.imageView?.image = UIImage(named: "iconNAWhite")
+            case 1:
+                //btnYes.imageView?.image = UIImage(named: "iconYesWhite")
+                //btnNo.imageView?.image = UIImage(named: "iconNoWhite")
+                btnNA.imageView?.image = UIImage(named: "iconNAY")
+            default:
+                print("Popolvuh")
+        }
+    }
+    
 }
