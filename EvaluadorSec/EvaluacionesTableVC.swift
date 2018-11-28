@@ -45,6 +45,10 @@ class EvaluacionesTableVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     func leerDatos(){
         
         //SVProgressHUD.show()

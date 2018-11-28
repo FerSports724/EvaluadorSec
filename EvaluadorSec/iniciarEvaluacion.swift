@@ -29,6 +29,8 @@ class iniciarEvaluacion: UIViewController {
     var recursos:[Int] = [1, 1, 1, 1, 1, 1]
     
     var arrayGeneralDatos:[Int] = []
+    
+    var misObservaciones:String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +61,29 @@ class iniciarEvaluacion: UIViewController {
         arrayGeneralDatos = inicio + desarrollo
         print("ññññññññññññññññññññ")
         print(arrayGeneralDatos)
+        
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     /*Observaciones*/
     @IBAction func observacionesBtn(_ sender: UIBarButtonItem) {
+    }
+    
+    /*Segue*/
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueObservaciones"{
+            let obsVC = segue.destination as! observacionesViewController
+            obsVC.observacionQueLlega = misObservaciones
+            obsVC.maestroQueLlega = arrayQuellega[0]
+            obsVC.fechaQueLlega = arrayQuellega[1]
+
+            obsVC.onSave = onSave
+        }
+    }
+    
+    /*Función onSave*/
+    func onSave(_ data: String) -> (){
+        misObservaciones = data
     }
     
     
@@ -82,12 +103,16 @@ extension iniciarEvaluacion: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEvaluar", for: indexPath) as! celdaRubros
+        
+        cell.btnYes.imageView?.image = UIImage(named: "iconYes")
+        cell.btnNo.imageView?.image = UIImage(named: "iconNo")
+        cell.btnNA.imageView?.image = UIImage(named: "iconNA")
         
         cell.cellDelegate = self
         cell.index = indexPath
         cell.seccion = indexPath.section
-        //cell.tag = indexPath.row
         
         switch indexPath.section {
         case 0:
@@ -158,7 +183,7 @@ extension iniciarEvaluacion: UITableViewDelegate{
 }
 
 extension iniciarEvaluacion: celdaPresionadaBoton{
-    func onClick(seccion: Int, index: Int, tag: Int) {
+    @objc func onClick(seccion: Int, index: Int, tag: Int) {
         print("Sección: \(seccion)")
         print("Index: \(index)")
         print("Tag: \(tag)")

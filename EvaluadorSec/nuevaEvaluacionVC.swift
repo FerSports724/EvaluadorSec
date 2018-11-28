@@ -40,7 +40,7 @@ class nuevaEvaluacionVC: UIViewController {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let myString = formatter.string(from: Date())
         let yourDate = formatter.date(from: myString)
-        formatter.dateFormat = "dd-MMM-yyyy"
+        formatter.dateFormat = "dd MMM yyyy"
         fecha = formatter.string(from: yourDate!)
         
         print(fecha)
@@ -66,6 +66,7 @@ class nuevaEvaluacionVC: UIViewController {
     
     @IBAction func iniciarEvaluacion(_ sender: UIButton) {
         let arrayIndex:[Int] = [0, 1, 2, 3, 4, 5]
+        arrayDatos = []
         var dato:String = ""
         for myIndice in arrayIndex{
             let elIndex = IndexPath(row: myIndice, section: 0)

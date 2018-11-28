@@ -31,23 +31,31 @@ class celdaRubros: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    /*override func prepareForReuse() {
+        
+    }*/
+    
+    /*override func prepareForReuse() {
+        btnYes.imageView?.image = UIImage(named: "iconYesY")
+        btnNo.imageView?.image = UIImage(named: "iconNoY")
+        btnNA.imageView?.image = UIImage(named: "iconNAY")
+    }*/
+    
     @IBAction func btnPressed(_ sender: UIButton) {
         cellDelegate?.onClick(seccion: seccion!, index: (index?.row)!, tag: sender.tag)
-        
         
         switch sender.tag {
             case 3:
                 btnYes.imageView?.image = UIImage(named: "iconYesY")
-                btnYes.imageView?.backgroundColor = UIColor.red
-                /*btnNo.imageView?.image = UIImage(named: "iconNoWhite")
-                btnNA.imageView?.image = UIImage(named: "iconNAWhite")*/
+                btnNo.imageView?.image = UIImage(named: "iconNoWhite")
+                btnNA.imageView?.image = UIImage(named: "iconNAWhite")
             case 2:
-                //btnYes.imageView?.image = UIImage(named: "iconYesWhite")
+                btnYes.imageView?.image = UIImage(named: "iconYesWhite")
                 btnNo.imageView?.image = UIImage(named: "iconNoY")
-                //btnNA.imageView?.image = UIImage(named: "iconNAWhite")
+                btnNA.imageView?.image = UIImage(named: "iconNAWhite")
             case 1:
-                //btnYes.imageView?.image = UIImage(named: "iconYesWhite")
-                //btnNo.imageView?.image = UIImage(named: "iconNoWhite")
+                btnYes.imageView?.image = UIImage(named: "iconYesWhite")
+                btnNo.imageView?.image = UIImage(named: "iconNoWhite")
                 btnNA.imageView?.image = UIImage(named: "iconNAY")
             default:
                 print("Popolvuh")
