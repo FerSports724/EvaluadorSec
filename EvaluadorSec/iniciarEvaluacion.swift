@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
+import FirebaseDatabase
 
 class iniciarEvaluacion: UIViewController {
     
@@ -18,6 +21,8 @@ class iniciarEvaluacion: UIViewController {
     let headersTabla:[String] = ["INICIO DE CLASE", "DESARROLLO DE CLASE", "CIERRE DE CLASE", "INTELIGENCIAS MÚLTIPLES", "INTELIGENCIA EMOCIONAL", "APRENDIZAJE COLABORATIVO", "PLANIFICACIÓN", "PROGRAMA", "RECURSOS Y HERRAMIENTAS"]
     let cantidadCeldas:[Int] = [2, 6, 1, 1, 2, 4, 2, 3, 6]
     
+    let rubrosFirebase:[String] = ["Clave", "Docente", "Fecha", "Idioma", "Grupo", "Materia", "Implementador", "ID-Evaluador", "Observaciones", "Rubro01", "Rubro02", "Rubro03", "Rubro04", "Rubro05", "Rubro06", "Rubro07", "Rubro08", "Rubro09", "Rubro10", "Rubro11", "Rubro12", "Rubro13", "Rubro14", "Rubro15", "Rubro16", "Rubro17", "Rubro18", "Rubro19", "Rubro20", "Rubro21", "Rubro22", "Rubro23", "Rubro24", "Rubro25", "Rubro26", "Rubro27"]
+    
     var inicio:[Int] = [1, 1]
     var desarrollo:[Int] = [1, 1, 1, 1, 1, 1]
     var cierre:Int = 1
@@ -28,7 +33,8 @@ class iniciarEvaluacion: UIViewController {
     var programa:[Int] = [1, 1, 1]
     var recursos:[Int] = [1, 1, 1, 1, 1, 1]
     
-    var arrayGeneralDatos:[Int] = []
+    var arrayResultadosRubros:[Int] = []
+    var generalArray:[Any] = []
     
     var misObservaciones:String = ""
 
@@ -58,9 +64,39 @@ class iniciarEvaluacion: UIViewController {
     
     /*Guardar datos*/
     @IBAction func saveBtn(_ sender: UIBarButtonItem) {
-        arrayGeneralDatos = inicio + desarrollo
-        print("ññññññññññññññññññññ")
-        print(arrayGeneralDatos)
+        generalArray = []
+        arrayResultadosRubros = []
+        
+        let idDelEvaluador = Auth.auth().currentUser?.uid
+        let claveMateria = randomString(length: 8)
+        let materiaGuardar = arrayQuellega[4] + "-" + claveMateria
+        print(materiaGuardar)
+        
+        arrayResultadosRubros = inicio + desarrollo
+        arrayResultadosRubros.append(cierre)
+        arrayResultadosRubros.append(multiples)
+        arrayResultadosRubros = arrayResultadosRubros + emocional + colaborativo + planificacion + programa + recursos
+        
+        generalArray.append(claveMateria)
+        generalArray = generalArray + arrayQuellega
+        generalArray.append(idDelEvaluador!)
+        generalArray.append(misObservaciones)
+        generalArray = generalArray + arrayResultadosRubros
+
+        let myRef = Database.database().reference()
+        
+        for index in 0...generalArray.count-1{
+            
+            print("Clave: \(rubrosFirebase[index]). Valor: \(generalArray[index])")
+            
+            myRef.child("\(arrayQuellega[0])/\(materiaGuardar)/\(rubrosFirebase[index])").setValue(generalArray[index])
+            print("---------------")
+            print("Se ha añadido un elemento a Firebase")
+            
+        }
+
+        
+        print(generalArray.count)
         
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
@@ -76,7 +112,7 @@ class iniciarEvaluacion: UIViewController {
             obsVC.observacionQueLlega = misObservaciones
             obsVC.maestroQueLlega = arrayQuellega[0]
             obsVC.fechaQueLlega = arrayQuellega[1]
-
+            
             obsVC.onSave = onSave
         }
     }
@@ -84,6 +120,12 @@ class iniciarEvaluacion: UIViewController {
     /*Función onSave*/
     func onSave(_ data: String) -> (){
         misObservaciones = data
+    }
+    
+    /*Generar Identificador aleatorio*/
+    func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0...length-1).map{ _ in letters.randomElement()! })
     }
     
     

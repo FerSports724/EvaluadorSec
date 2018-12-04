@@ -569,7 +569,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconYes" translatesAutoresizingMaskIntoConstraints="NO" id="YCA-JK-ywb">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconNAY" translatesAutoresizingMaskIntoConstraints="NO" id="YCA-JK-ywb">
                                                     <rect key="frame" x="387" y="79" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="5kb-di-9MY"/>
@@ -635,16 +635,46 @@
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celdaDatos" rowHeight="70" id="cbT-G3-cPb">
-                                        <rect key="frame" x="0.0" y="28" width="834" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celdaDatos" rowHeight="65" id="cbT-G3-cPb" customClass="celdaResumenDatos" customModule="EvaluadorSec" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="834" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cbT-G3-cPb" id="9ru-80-zuw">
-                                            <rect key="frame" x="0.0" y="0.0" width="834" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="834" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nathalie Oyuki Guzmán Espinobarros" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PFK-x3-JCg">
+                                                    <rect key="frame" x="214" y="11" width="605" height="43"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Implementador:" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BH1-MV-872">
+                                                    <rect key="frame" x="15" y="11" width="183" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="183" id="ffI-MH-HxN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PFK-x3-JCg" firstAttribute="bottom" secondItem="9ru-80-zuw" secondAttribute="bottomMargin" id="2fg-Nv-gYj"/>
+                                                <constraint firstItem="PFK-x3-JCg" firstAttribute="top" secondItem="9ru-80-zuw" secondAttribute="topMargin" id="8zw-Tn-Ch2"/>
+                                                <constraint firstItem="BH1-MV-872" firstAttribute="bottom" secondItem="9ru-80-zuw" secondAttribute="bottomMargin" id="Fnd-ni-WPN"/>
+                                                <constraint firstItem="BH1-MV-872" firstAttribute="leading" secondItem="9ru-80-zuw" secondAttribute="leadingMargin" id="GLy-mj-dY0"/>
+                                                <constraint firstItem="PFK-x3-JCg" firstAttribute="leading" secondItem="BH1-MV-872" secondAttribute="trailing" constant="16" id="cru-iO-AEu"/>
+                                                <constraint firstItem="BH1-MV-872" firstAttribute="top" secondItem="9ru-80-zuw" secondAttribute="topMargin" id="dxU-QU-N4c"/>
+                                                <constraint firstItem="PFK-x3-JCg" firstAttribute="trailing" secondItem="9ru-80-zuw" secondAttribute="trailingMargin" id="yrr-Yb-IhZ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelDato" destination="PFK-x3-JCg" id="SL0-CY-3Lg"/>
+                                            <outlet property="labelTitulo" destination="BH1-MV-872" id="KEV-6G-KYS"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celdaObservaciones" rowHeight="350" id="zvD-nR-DBL" customClass="celdaObservaciones" customModule="EvaluadorSec" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="98" width="834" height="350"/>
+                                        <rect key="frame" x="0.0" y="93" width="834" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zvD-nR-DBL" id="pVn-c4-kDW">
                                             <rect key="frame" x="0.0" y="0.0" width="834" height="349.5"/>
@@ -669,13 +699,40 @@
                                             <outlet property="labelObservaciones" destination="Vli-d1-Gj1" id="b2g-EP-YyP"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celdaResultados" rowHeight="75" id="h5s-AC-Ja6">
-                                        <rect key="frame" x="0.0" y="448" width="834" height="75"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celdaResultados" rowHeight="150" id="h5s-AC-Ja6" customClass="celdaRubrosDetails" customModule="EvaluadorSec" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="443" width="834" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h5s-AC-Ja6" id="S4b-lR-BQW">
-                                            <rect key="frame" x="0.0" y="0.0" width="834" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="834" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Utiliza los recursos ofrecidos por CS/WS (proyección de contenidos, posters, sparks, flares, audios, etc.)." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8TO-0l-eiX">
+                                                    <rect key="frame" x="15" y="11" width="804" height="62.5"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconYesY" translatesAutoresizingMaskIntoConstraints="NO" id="ktL-IY-Aga">
+                                                    <rect key="frame" x="385" y="81.5" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="74k-02-tac"/>
+                                                        <constraint firstAttribute="height" constant="64" id="yw0-KC-D8A"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8TO-0l-eiX" firstAttribute="leading" secondItem="S4b-lR-BQW" secondAttribute="leadingMargin" id="7lO-oa-mfC"/>
+                                                <constraint firstItem="8TO-0l-eiX" firstAttribute="top" secondItem="S4b-lR-BQW" secondAttribute="topMargin" id="HdY-TH-qEk"/>
+                                                <constraint firstItem="8TO-0l-eiX" firstAttribute="trailing" secondItem="S4b-lR-BQW" secondAttribute="trailingMargin" id="HwL-Fs-DBa"/>
+                                                <constraint firstItem="ktL-IY-Aga" firstAttribute="centerX" secondItem="S4b-lR-BQW" secondAttribute="centerX" id="IOi-UN-ipf"/>
+                                                <constraint firstAttribute="bottom" secondItem="ktL-IY-Aga" secondAttribute="bottom" constant="4" id="QYf-Hh-paw"/>
+                                                <constraint firstItem="ktL-IY-Aga" firstAttribute="top" secondItem="8TO-0l-eiX" secondAttribute="bottom" constant="8" id="hSk-T3-Jcn"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagenRubro" destination="ktL-IY-Aga" id="7PL-H5-aIv"/>
+                                            <outlet property="labelMiRubro" destination="8TO-0l-eiX" id="gTb-OH-iz0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -825,7 +882,6 @@
         <image name="iconNAY" width="64" height="64"/>
         <image name="iconNoY" width="64" height="64"/>
         <image name="iconUser" width="32" height="32"/>
-        <image name="iconYes" width="64" height="64"/>
         <image name="iconYesY" width="64" height="64"/>
     </resources>
 </document>

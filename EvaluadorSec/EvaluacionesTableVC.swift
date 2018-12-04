@@ -46,7 +46,8 @@ class EvaluacionesTableVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
+        //leerDatos()
+        self.tableView.reloadData()
     }
     
     func leerDatos(){
@@ -78,10 +79,13 @@ class EvaluacionesTableVC: UIViewController {
                     print("--------Se ha añadido una materia a Diana--------")
                     
                     //Caso otro
+                    
                 default:
+                    print("Hola")
                     self.arrayEvaluacionesOtro.append(miMateria.materia)
                     self.arrayClavesOtro.append(miMateria.clave)
-                    self.arrayDatesOtro.append(miMateria.clave)
+                    self.arrayDatesOtro.append(miMateria.fecha)
+
                     print("--------Se ha añadido una materia a Otro--------")
                 }
                 
