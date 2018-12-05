@@ -41,6 +41,7 @@ class EvaluacionesTableVC: UIViewController {
         print("El id del docente es: \(idDocente)")
         print("El nombre del docente seleccionado es: \(docenteSeleccionad)")
         self.title = docenteSeleccionad
+        self.tableView.reloadData()
         leerDatos()
         
     }
@@ -58,6 +59,9 @@ class EvaluacionesTableVC: UIViewController {
             
             if let dictionary = snapshot.value as? [String: AnyObject]{
                 let miMateria = modeloEvaluacion()
+                let laMateria = dictionary["Materia"] as? String
+                let laFecha = dictionary["Fecha"] as? String
+                let laClave = dictionary["Clave"] as? String
                 miMateria.materia = dictionary["Materia"] as? String
                 miMateria.fecha = dictionary["Fecha"] as? String
                 miMateria.clave = dictionary["Clave"] as? String
@@ -82,9 +86,9 @@ class EvaluacionesTableVC: UIViewController {
                     
                 default:
                     print("Hola")
-                    self.arrayEvaluacionesOtro.append(miMateria.materia)
-                    self.arrayClavesOtro.append(miMateria.clave)
-                    self.arrayDatesOtro.append(miMateria.fecha)
+                    self.arrayEvaluacionesOtro.append(laMateria ?? "")
+                    self.arrayClavesOtro.append(laClave ?? "")
+                    self.arrayDatesOtro.append(laFecha ?? "")
 
                     print("--------Se ha añadido una materia a Otro--------")
                 }
@@ -213,10 +217,10 @@ extension EvaluacionesTableVC: UITableViewDelegate{
                 }
                 
                 
-                let destinationVC = segue.destination as! evaluacionDetailsVC
-                destinationVC.docenteEvaluado = docenteSeleccionad
-                destinationVC.materiaSeleccionada = miMateria
-                destinationVC.claveMateria = clave
+                let destinationVC = segue.destination as! resumenVC
+                destinationVC.docente = docenteSeleccionad
+                destinationVC.materia = miMateria
+                destinationVC.claveM = clave
             }
             
         }

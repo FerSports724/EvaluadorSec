@@ -230,7 +230,7 @@ extension iniciarEvaluacion: celdaPresionadaBoton{
         print("Index: \(index)")
         print("Tag: \(tag)")
         
-        /*switch seccion {
+        switch seccion {
         case 0:
             inicio[index] = tag
             print("..........")
@@ -270,7 +270,7 @@ extension iniciarEvaluacion: celdaPresionadaBoton{
         default:
             print("..........")
             print("Mis ataques komodos de dinero.")
-        }*/
+        }
         
     }
 }

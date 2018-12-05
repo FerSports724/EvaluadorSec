@@ -543,86 +543,6 @@
             </objects>
             <point key="canvasLocation" x="4931.6546762589933" y="-606.47482014388493"/>
         </scene>
-        <!--Title-->
-        <scene sceneID="YRY-w2-6B7">
-            <objects>
-                <viewController id="Bxj-9l-iaU" customClass="evaluacionDetailsVC" customModule="EvaluadorSec" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6dq-lz-geg">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xfj-a2-MpS">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celdaRubro" id="0cH-jE-TRi" customClass="celdaDetallesEvaluacion" customModule="EvaluadorSec" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="834" height="150"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0cH-jE-TRi" id="WIb-Ow-o2C">
-                                            <rect key="frame" x="0.0" y="0.0" width="834" height="149.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ztf-m2-a4X">
-                                                    <rect key="frame" x="15" y="11" width="804" height="59"/>
-                                                    <string key="text">El sistema Classroom Solution está correctamente instalado en el aula. Fomenta la participación del alumno mediante la manipulación del Dispositivo y la Aplicación.</string>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="23"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconNAY" translatesAutoresizingMaskIntoConstraints="NO" id="YCA-JK-ywb">
-                                                    <rect key="frame" x="387" y="79" width="60" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="5kb-di-9MY"/>
-                                                        <constraint firstAttribute="height" constant="60" id="Iui-Ji-FhR"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ztf-m2-a4X" firstAttribute="leading" secondItem="WIb-Ow-o2C" secondAttribute="leadingMargin" id="51b-TL-lDV"/>
-                                                <constraint firstItem="ztf-m2-a4X" firstAttribute="top" secondItem="WIb-Ow-o2C" secondAttribute="topMargin" id="AeT-uS-AxV"/>
-                                                <constraint firstItem="YCA-JK-ywb" firstAttribute="top" secondItem="ztf-m2-a4X" secondAttribute="bottom" constant="9" id="GtU-54-lLk"/>
-                                                <constraint firstItem="ztf-m2-a4X" firstAttribute="trailing" secondItem="WIb-Ow-o2C" secondAttribute="trailingMargin" id="LMH-II-U79"/>
-                                                <constraint firstItem="ztf-m2-a4X" firstAttribute="leading" secondItem="WIb-Ow-o2C" secondAttribute="leadingMargin" id="MFb-fj-V4t"/>
-                                                <constraint firstItem="YCA-JK-ywb" firstAttribute="bottom" secondItem="WIb-Ow-o2C" secondAttribute="bottomMargin" id="UjA-ag-Whm"/>
-                                                <constraint firstItem="ztf-m2-a4X" firstAttribute="top" secondItem="WIb-Ow-o2C" secondAttribute="topMargin" id="XoT-XU-73R"/>
-                                                <constraint firstItem="ztf-m2-a4X" firstAttribute="trailing" secondItem="WIb-Ow-o2C" secondAttribute="trailingMargin" id="aPZ-qg-EL8"/>
-                                                <constraint firstItem="YCA-JK-ywb" firstAttribute="centerX" secondItem="WIb-Ow-o2C" secondAttribute="centerX" id="gT7-Uf-aAC"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="imagenRubro" destination="YCA-JK-ywb" id="2mY-PP-b9M"/>
-                                            <outlet property="labelTextRubro" destination="ztf-m2-a4X" id="a4J-5J-Ehn"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="Bxj-9l-iaU" id="yMc-nL-2r6"/>
-                                    <outlet property="delegate" destination="Bxj-9l-iaU" id="mDr-2C-V8a"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="xfj-a2-MpS" firstAttribute="bottom" secondItem="tgV-Mp-LQ7" secondAttribute="bottom" id="Gd2-CO-3Bd"/>
-                            <constraint firstItem="xfj-a2-MpS" firstAttribute="trailing" secondItem="tgV-Mp-LQ7" secondAttribute="trailing" id="JyL-RC-Xxw"/>
-                            <constraint firstItem="xfj-a2-MpS" firstAttribute="top" secondItem="6dq-lz-geg" secondAttribute="top" id="a86-D0-5UO"/>
-                            <constraint firstItem="xfj-a2-MpS" firstAttribute="leading" secondItem="tgV-Mp-LQ7" secondAttribute="leading" id="rhk-Cq-hcB"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="tgV-Mp-LQ7"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="Cib-qt-8Vu">
-                        <barButtonItem key="rightBarButtonItem" title="Resume" id="K00-cm-QZC">
-                            <connections>
-                                <action selector="btnResumen:" destination="Bxj-9l-iaU" id="PGp-jT-EX0"/>
-                                <segue destination="9zx-hz-dOi" kind="show" identifier="segueResumen" id="qNn-Gp-awe"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sef-kB-tkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4206.4748201438852" y="71.762589928057551"/>
-        </scene>
         <!--ResumenVC-->
         <scene sceneID="f7n-mc-slH">
             <objects>
@@ -756,7 +676,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTq-fd-x0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4931.6546762589933" y="71.762589928057551"/>
+            <point key="canvasLocation" x="4206" y="72"/>
         </scene>
         <!--Evaluaciones TableVC-->
         <scene sceneID="zq5-FL-Nux">
@@ -805,7 +725,7 @@
                                         <connections>
                                             <outlet property="labelFecha" destination="1Rm-Px-eOX" id="wGD-f4-bm1"/>
                                             <outlet property="labelMateria" destination="cyQ-tw-KVk" id="slA-RI-ZcX"/>
-                                            <segue destination="Bxj-9l-iaU" kind="show" identifier="segueDetallesEv" id="ccy-H2-wcr"/>
+                                            <segue destination="9zx-hz-dOi" kind="show" identifier="segueDetallesEv" id="ndI-aE-D16"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

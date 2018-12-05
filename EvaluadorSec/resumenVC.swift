@@ -19,6 +19,8 @@ class resumenVC: UIViewController {
     
     var docente = String()
     var materia = String()
+    var claveM = String()
+    var materiaJSON:String! = ""
     
     var lasObservaciones = ""
     
@@ -35,6 +37,7 @@ class resumenVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        materiaJSON = materia + "-" + claveM
         self.title = "Resumen De La Evaluación"
         jalarArray()
         myRef = Database.database().reference()
@@ -56,7 +59,7 @@ class resumenVC: UIViewController {
     
     /*Espero esta si sea la buena*/
     func downloadData(){
-        myRef.child(docente).child(materia).observeSingleEvent(of: .value) { (snapshot) in
+        myRef.child(docente).child(materiaJSON).observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let miObservancia = value?["Observaciones"] as? String ?? ""
             
