@@ -31,15 +31,9 @@ class celdaRubros: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    /*override func prepareForReuse() {
-        
-    }*/
-    
-    /*override func prepareForReuse() {
-        btnYes.imageView?.image = UIImage(named: "iconYesY")
-        btnNo.imageView?.image = UIImage(named: "iconNoY")
-        btnNA.imageView?.image = UIImage(named: "iconNAY")
-    }*/
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
     
     @IBAction func btnPressed(_ sender: UIButton) {
         cellDelegate?.onClick(seccion: seccion!, index: (index?.row)!, tag: sender.tag)

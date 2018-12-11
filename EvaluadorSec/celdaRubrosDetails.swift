@@ -9,9 +9,10 @@
 import UIKit
 
 class celdaRubrosDetails: UITableViewCell {
-
-    @IBOutlet weak var labelMiRubro: UILabel!
-    @IBOutlet weak var imagenRubro: UIImageView!
+    
+    @IBOutlet weak var resultadoYes: UILabel!
+    @IBOutlet weak var resultadoNo: UILabel!
+    @IBOutlet weak var resultadoNoAplica: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -24,12 +24,16 @@ class resumenVC: UIViewController {
     
     var lasObservaciones = ""
     
-    let sectionHeaders:[String] = ["Datos del docente", "Observaciones", "Inicio de clase", "Desarrollo de clase", "Cierre de clase", "Inteligencias Múltiples", "Inteligencia Emocional", "Aprendizaje Colaborativo", "Planificación", "Programa", "Recursos y Herramientas"]
+    let sectionHeaders:[String] = ["Datos del docente", "Puntaje obtenido",  "Observaciones"/*, "Inicio de clase", "Desarrollo de clase", "Cierre de clase", "Inteligencias Múltiples", "Inteligencia Emocional", "Aprendizaje Colaborativo", "Planificación", "Programa", "Recursos y Herramientas"*/]
     
     let arrayTituloDatos:[String] = ["Docente:", "Materia:", "Grupo:", "Idioma:", "Fecha:", "Implementador:"]
     var arrayDatos:[String] = ["Tacos de canasta", "Tacos", "Lleve sus tacos", "Panotla", "Tlaxcala", "Totolac", "Santa Justina Ecatepec"]
     
-    let cantidadCeldas:[Int] = [2, 6, 1, 1, 2, 4, 2, 3, 6]
+    var cantidadSi:Int = 0
+    var cantidadNo:Int = 0
+    var cantidadNA:Int = 0
+    
+    //let cantidadCeldas:[Int] = [2, 6, 1, 1, 2, 4, 2, 3, 6]
     
     var arrayResultadoRubros:[Int] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     
@@ -39,7 +43,7 @@ class resumenVC: UIViewController {
         super.viewDidLoad()
         materiaJSON = materia + "-" + claveM
         self.title = "Resumen De La Evaluación"
-        jalarArray()
+        //jalarArray()
         myRef = Database.database().reference()
         
         print("Docente: \(docente)")
@@ -105,6 +109,22 @@ class resumenVC: UIViewController {
             self.arrayResultadoRubros[25] = (value?["Rubro26"] as? Int)!
             self.arrayResultadoRubros[26] = (value?["Rubro27"] as? Int)!
             
+            for index in 0...self.arrayResultadoRubros.count-1{
+                switch self.arrayResultadoRubros[index]{
+                case 3:
+                    self.cantidadSi = self.cantidadSi + 1
+                case 2:
+                    self.cantidadNo = self.cantidadNo + 1
+                default:
+                    self.cantidadNA = self.cantidadNA + 1
+                }
+            }
+            
+            print("++++++++++++++++++++++++++++++")
+            print(self.cantidadSi)
+            print(self.cantidadNo)
+            print(self.cantidadNA)
+            
             print(".................................")
             print(self.arrayResultadoRubros)
             
@@ -152,24 +172,8 @@ extension resumenVC: UITableViewDelegate{
             return 6
         case 1:
             return 1
-        case 2:
-            return 2
-        case 3:
-            return 6
-        case 4:
-            return 1
-        case 5:
-            return 1
-        case 6:
-            return 2
-        case 7:
-            return 4
-        case 8:
-            return 2
-        case 9:
-            return 3
         default:
-            return 6
+            return 1
         }
     }
     
@@ -182,14 +186,19 @@ extension resumenVC: UITableViewDelegate{
             cell01.labelDato.text = arrayDatos[indexPath.row]
             return cell01
         case 1:
+            let cell03 = tableView.dequeueReusableCell(withIdentifier: "celdaResultados") as! celdaRubrosDetails
+            cell03.resultadoYes.text = String(cantidadSi)
+            cell03.resultadoNo.text = String(cantidadNo)
+            cell03.resultadoNoAplica.text = String(cantidadNA)
+            return cell03
+        default:
             let cell02 = tableView.dequeueReusableCell(withIdentifier: "celdaObservaciones") as! celdaObservaciones
             cell02.labelObservaciones.text = lasObservaciones
             return cell02
-        default:
             
-            let cell03 = tableView.dequeueReusableCell(withIdentifier: "celdaResultados") as! celdaRubrosDetails
             
-            switch indexPath.section{
+            
+            /*switch indexPath.section{
                 
             case 2:
                 let rubroInicio = arrayEvaluacion[indexPath.row]
@@ -266,9 +275,7 @@ extension resumenVC: UITableViewDelegate{
                 cell03.imagenRubro.image = imagenEvaluaciones(evaluacion: imagenDeCierre)
                 return cell03
                 
-            }
-            
-            return cell03
+            }*/
         }
     }
     
